@@ -1,0 +1,517 @@
+/* Подключение шрифтов */
+@font-face {
+  font-family: "Helvetica";
+  src: url("../fonts/HelveticaBold/HelveticaBold.eot"),
+    url("../fonts/HelveticaBold/HelveticaBold.woff") format("woff"),
+    url("../fonts/HelveticaBold/HelveticaBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Helvetica";
+  src: url("../fonts/HelveticaRegular/HelveticaRegular.eot"),
+    url("../fonts/HelveticaRegular/HelveticaRegular.woff") format("woff"),
+    url("../fonts/HelveticaRegular/HelveticaRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url("../fonts/PlayfairDisplayBold/PlayfairDisplayBold.eot"),
+    url("../fonts/PlayfairDisplayBold/PlayfairDisplayBold.woff") format("woff"),
+    url("../fonts/PlayfairDisplayBold/PlayfairDisplayBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PlayfairDisplay";
+  src: url("../fonts/PlayfairDisplayRegular/PlayfairDisplayRegular.eot"),
+    url("../fonts/PlayfairDisplayRegular/PlayfairDisplayRegular.woff") format("woff"),
+    url("../fonts/PlayfairDisplayRegular/PlayfairDisplayRegular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ProximaNova";
+  src: url("../fonts/ProximaNovaBold/ProximaNovaBold.eot"),
+    url("../fonts/ProximaNovaBold/ProximaNovaBold.woff") format("woff"),
+    url("../fonts/ProximaNovaBold/ProximaNovaBold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* Общие стили */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  box-sizing: inherit;
+  font-size: 16px;
+  font-family: Helvetica, sans-serif;
+  color: #1f1f1f;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #1f1f1f;
+}
+
+.main-header--wrap,
+.about-us,
+.featured-works,
+.testimonials-wrap,
+.main-footer-wrap {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.main-header,
+.testimonials {
+  background-color: #f4f4f4;
+}
+
+/* Стилизвция шапки сайта */
+
+.main-header--wrap {
+  padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+
+.navigation-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logotype {
+  font-size: 1.6rem;
+  font-family: 'ProximaNova', sans-serif;
+  margin-left: 15px;
+}
+
+.burger-menu {
+  display: block;
+  cursor: pointer;
+  margin-right: 15px;
+  transition: .5s;
+}
+
+.burger-menu:hover {
+  opacity: .5;
+}
+
+.burger-menu__lines1,
+.burger-menu__lines2,
+.burger-menu__lines3 {
+  width: 35px;
+  height: 5px;
+  margin: 6px 0 6px 5px;
+  background-color: #1f1f1f;
+  border-radius: 2px;
+  transition: .5s;
+}
+
+.change .burger-menu__lines1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-7px, 7px);
+}
+
+.change .burger-menu__lines2 {
+  opacity: 0;
+}
+
+.change .burger-menu__lines3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+
+.main-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 48%;
+  flex-grow: 1;
+  padding: 0 15px;
+}
+
+.main-title h1 {
+  font-size: 5rem;
+}
+
+.main-title p {
+  font-size: 1.1rem;
+  font-family: 'PlayfairDisplay', sans-serif;
+}
+
+/* Стилизация контентной части сайта */
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.about-us__title,
+.featured-works__title,
+.posts__title,
+.testimonials__title {
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-bottom: 60px;
+}
+
+.about-us__text {
+  font-size: 3rem;
+  width: 60%;
+  text-align: center;
+  margin-bottom: 60px;
+  font-family: 'PlayfairDisplay', sans-serif;
+}
+
+.about-us__link,
+.featured-works__link,
+.posts__link {
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #797979;
+  transition: .4s;
+  font-weight: bold;
+  margin-bottom: 100px;
+}
+
+.about-us__link:hover,
+.featured-works__link:hover,
+.posts__link:hover {
+  border-bottom: 2px solid #000;
+}
+
+.featured-works,
+.posts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.some-blocks {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 0 auto 60px;
+}
+
+.some-blocks__left,
+.some-blocks__right {
+  width: 47%;
+  height: 80vh;
+  background-color: #cfebe6;
+}
+
+.some-blocks__right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+}
+
+.pink {
+  width: 100%;
+  height: 49%;
+  background-color: #fdd5ce;
+}
+
+.pink--light {
+  background-color: #f6eaec;
+}
+
+.posts__wrap {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 60px;
+}
+
+.posts__block {
+  width: 30%;
+  border: 1px solid rgba(0, 0, 0, .1);
+  padding: 40px;
+  transition: .7s;
+}
+
+.posts__block span {
+  text-transform: uppercase;
+  font-size: .9rem;
+}
+
+.posts__block p {
+  margin-top: 50px;
+  margin-bottom: 70px;
+  font-size: 1.5rem;
+  font-family: 'PlayfairDisplay', sans-serif;
+  line-height: 2.2rem;
+}
+
+.posts__block:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.testimonials-common-wrap {
+  text-align: center;
+ padding-bottom: 100px;
+}
+
+.testimonials__title {
+  padding-top: 100px;
+}
+
+.testimonials-carousel-wrap {
+  width: 65%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.testimonials-carousel-wrap .people-say {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.people-say__text {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.people-say__icon {
+  width: 50px;
+  height: 50px;
+  background-color: #231f20;
+  border-radius: 50%; 
+  margin-top: 25px;
+  margin-bottom: 15px;
+}
+
+.people-say__user {
+  font-weight: bold;
+}
+
+.people-say__user-position {
+  font-size: .9rem;
+}
+
+.slick-dots {
+  display: flex;
+  justify-content: center;
+  margin-top:20px;
+  list-style: none;
+}
+
+.slick-dots li {
+  width: 35px;
+  height: 5px;
+  background-color: #cdcdcd;
+  margin-left: 5px;
+}
+
+.slick-dots button {
+  opacity: 0;
+}
+
+.slick-dots li.slick-active {
+  background-color: #f20e35;
+}
+
+.main-footer-wrap {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 60px;
+}
+
+.logotype--footer,
+.our-address,
+.social,
+.copyright {
+  margin-right: 10px;
+}
+
+.logotype--footer a {
+  color: #dedede;
+}
+
+.our-address h4,
+.social h4,
+.copyright h4 {
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  font-size: .9rem;
+  color: #1f1f1f;
+}
+
+.our-address,
+.social__list li a,
+.copyright {
+  color: #dedede;
+  transition: .5s;
+}
+
+.social__list li a:hover {
+  color: #1f1f1f;
+}
+
+.our-address p,
+.copyright p {
+  margin-bottom: 10px;
+}
+
+.social__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.social__list li {
+  width: 40%;
+  margin-bottom: 5px;
+}
+
+
+/* Медиа запросы */
+
+@media (max-width: 1024px) {
+  body {
+    font-size: 14px;
+  }
+  .about-us__title {
+    margin-bottom: 30px;
+  }
+  .about-us__text {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .people-say__text {
+    font-size: 1.4rem;
+  }
+  .people-say__icon {
+    width: 40px;
+    height: 40px;
+  }
+  .main-footer-wrap {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .our-address h4, .social h4, .copyright h4 {
+    margin-bottom: 15px;
+    margin-top: 20px;
+  }
+  .logotype--footer, .our-address, .social, .copyright {
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-title {
+    width: 90%;
+  }
+  .main-title h1 {
+    font-size: 3rem;
+  }
+  .main-title p {
+    font-size: 1rem;
+  }
+  .about-us__text {
+    font-size: 2rem;
+  }
+  .some-blocks {
+    flex-direction: column;
+    align-items: center;
+  }
+  .some-blocks__left, .some-blocks__right {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+  .some-blocks__left {
+    height: 40vh;
+  }
+  .posts__wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+  .posts__block {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: 12px;
+  }
+  .main-header--wrap {
+    height: 60vh;
+  }
+  .about-us {
+    height: auto;
+  }
+  .about-us {
+    padding-top: 50px;
+  }
+  .about-us__text {
+    font-size: 1.5rem;
+  }
+  .people-say__text {
+    font-size: 1.2rem;
+  }
+  .posts__block p {
+    margin-top: 25px;
+    margin-bottom: 40px;
+    font-size: 1.2rem;
+  }
+  .posts__block span {
+    font-size: .7rem;
+  }
+}
+
+@media (max-width: 425px) {
+  body {
+    font-size: 10px;
+  }
+  .main-title p {
+    font-size: .9rem;
+  }
+  .about-us__text {
+    font-size: 1.1rem;
+  }
+  .people-say__text {
+    font-size: 1rem;
+  }
+}
